@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dynamic Form Using Object Keys</title>
+</head>
+<body>
+
+  <h2>Edit Profile</h2>
+  <div id="formContainer"></div>
+
+  <script>
+    const user = {
+      name: "Amit",
+      age: 25,
+      email: "amit@example.com",
+      state: "Maharashtra"
+    };
+
+    const formContainer = document.getElementById("formContainer");
+
+    Object.keys(user).forEach((key) => {
+      // Create a container div
+      const fieldDiv = document.createElement("div");
+
+      // Create label
+      const label = document.createElement("label");
+      label.textContent = key.toUpperCase() + ": ";
+
+      // Create input
+      const input = document.createElement("input");
+      input.name = key;
+      input.value = user[key];
+
+      // Add everything to the div
+      fieldDiv.appendChild(label);
+      fieldDiv.appendChild(input);
+      fieldDiv.appendChild(document.createElement("br"));
+      fieldDiv.appendChild(document.createElement("br"));
+
+      // Append to the form container
+      formContainer.appendChild(fieldDiv);
+    });
+  </script>
+
+</body>
+</html>
