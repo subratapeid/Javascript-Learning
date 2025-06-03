@@ -106,3 +106,10 @@ let joinNames = names.join("-");
 let concatedArray = array.concat(names);
     // console.log("Concat: " + concatedArray);
 
+
+// Destructing Arary
+
+let fruits2 = [fruit1="Banana", "Mango", "Apple"];
+
+let [, , fruit] = fruits2;
+console.log(fruit);

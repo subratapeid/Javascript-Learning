@@ -125,3 +125,15 @@ Object.defineProperty(person, "id", {
 });
 person.id = 202;  // Won’t change
 // 📌 Use Case: Hide internal configuration from user.
+
+// Destructing Object
+
+let students=[{"name": "Ajay", "age": 20, "city": "Bangalore"},
+{"name": "Bijay", "age": 25, "city": "Mangalore"}
+]
+
+let [student1, student2] = students;
+console.log(student2.age);
+
+let newStudents = Object.create(students[1]);
+console.log(newStudents.city);
